@@ -1,39 +1,31 @@
 package ge.tbc.testautomation.javaoop.runners;
 
 import ge.tbc.testautomation.javaoop.figures.Circle;
+import ge.tbc.testautomation.javaoop.figures.Figures;
+import ge.tbc.testautomation.javaoop.figures.Rectangle;
+import ge.tbc.testautomation.javaoop.figures.Triangle;
+import ge.tbc.testautomation.javaoop.util.HelperFunctions;
 import ge.tbc.testautomation.javaoop.util.Util;
 
-import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+        Figures figures = new Figures(5, 9);
+        System.out.println(figures.getPerimeter());
+        System.out.println(figures.getPerimeter());
 
-        Circle circle = new Circle(Math.random());
-        System.out.println(Circle.numberOfCircleInstances);
+        Rectangle rectangle = new Rectangle(5, 9, 1, 9);
+        Rectangle rectangle1 = new Rectangle(1,2,5,9);
+        System.out.println(rectangle.getPerimeter());
+        System.out.println(rectangle.getArea());
+        System.out.println(rectangle1.getPerimeter());
+        System.out.println(rectangle1.getArea());
+        HelperFunctions.compareRectangles(rectangle, rectangle1);
 
-        Circle circle1 = new Circle(Math.random());
-        System.out.println(Circle.numberOfCircleInstances);
+        Triangle triangle = new Triangle(1,2,4,3,6,2);
+        System.out.println(triangle.getArea());
+        System.out.println(triangle.getPerimeter());
 
-        Circle circle2 = new Circle(Math.random());
-        System.out.println(Circle.numberOfCircleInstances);
-
-        Circle circle3 = new Circle(Math.random());
-        System.out.println(Circle.numberOfCircleInstances);
-
-        Circle circle4 = new Circle(Math.random());
-        System.out.println(Circle.numberOfCircleInstances);
-
-        String toString1 = Util.circleToString(circle);
-        String toString2 = Util.circleToString(circle1);
-        String toString3 = Util.circleToString(circle2);
-        String toString4 = Util.circleToString(circle3);
-        String toString5 = Util.circleToString(circle4);
-        System.out.println(toString1);
-        System.out.println(toString2);
-        System.out.println(toString3);
-        System.out.println(toString4);
-        System.out.println(toString5);
-        System.out.println(toString1);
 
     }
 }
