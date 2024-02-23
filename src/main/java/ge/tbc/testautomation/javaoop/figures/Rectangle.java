@@ -5,7 +5,7 @@ public class Rectangle extends Figures{
     private double b;
 
     public Rectangle(double area, double perimeter, double a, double b) {
-        super(area, perimeter);
+        super();
         this.a = a;
         this.b = b;
     }
