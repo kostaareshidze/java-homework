@@ -1,12 +1,14 @@
 package ge.tbc.testautomation.javaoop.figures;
 
 public class Figures {
-    private double area;
-    private double perimeter;
+    public double area;
+    public double perimeter;
+    public static int numberOfCircleInstances = 0;
 
-    public Figures(double area, double perimeter) {
+    public Figures() {
         this.area = area;
         this.perimeter = perimeter;
+        numberOfCircleInstances++;
     }
 
     public double getArea() {

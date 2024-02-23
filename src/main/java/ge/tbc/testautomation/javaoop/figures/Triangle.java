@@ -7,7 +7,7 @@ public class Triangle extends Figures{
     private double h;
 
     public Triangle(double area, double perimeter, double a, double b, double c, double h) {
-        super(area, perimeter);
+        super();
         this.a = a;
         this.b = b;
         this.c = c;
@@ -40,3 +40,4 @@ public class Triangle extends Figures{
         return a + b + c;
     }
 }
+//  0 4 2
