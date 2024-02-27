@@ -21,8 +21,16 @@ public class Rectangle extends Figures{
     public double getArea(){
         return a * b;
     }
+
     @Override
-    public double getPerimeter(){
-        return (a + b) * 2;
+    public double getLength() {
+        return 0;
     }
+
+    @Override
+    public void printPackageName() {
+
+    }
+
+
 }
