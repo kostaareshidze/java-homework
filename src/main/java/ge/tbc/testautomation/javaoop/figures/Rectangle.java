@@ -1,11 +1,12 @@
 package ge.tbc.testautomation.javaoop.figures;
 
-public class Rectangle extends Figures{
+import java.util.Comparator;
+
+public class Rectangle extends Figures implements Comparator {
     private double a;
     private double b;
 
-    public Rectangle(double area, double perimeter, double a, double b) {
-        super();
+    public Rectangle(double a, double b) {
         this.a = a;
         this.b = b;
     }
@@ -24,7 +25,7 @@ public class Rectangle extends Figures{
 
     @Override
     public double getLength() {
-        return 0;
+        return 2 * (a + b);
     }
 
     @Override
@@ -33,4 +34,23 @@ public class Rectangle extends Figures{
     }
 
 
+    @Override
+    public int compare(Object o1, Object o2) {
+        Rectangle rectangle1 = (Rectangle) o1;
+        Rectangle rectangle2 = (Rectangle) o2;
+        if (rectangle1.getLength() == rectangle2.getLength())
+            return 0;
+        else if (rectangle1.getLength() > rectangle2.getLength())
+            return -1;
+        else
+            return 1;
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "a=" + a +
+                ", b=" + b +
+                '}';
+    }
 }
