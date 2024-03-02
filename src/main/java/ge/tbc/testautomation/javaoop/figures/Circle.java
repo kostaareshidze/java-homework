@@ -5,6 +5,8 @@ import ge.tbc.testautomation.abstractClassesInterfaces.interfaces.IValidCircle;
 import ge.tbc.testautomation.exceptionsStringOperationsRegex.LimitException;
 import ge.tbc.testautomation.exceptionsStringOperationsRegex.RadiusException;
 
+import java.util.HashSet;
+
 public class Circle extends Figures implements IResizableCircle, IValidCircle, Comparable {
     public double radius;
 
@@ -78,4 +80,7 @@ public class Circle extends Figures implements IResizableCircle, IValidCircle, C
         else
             return -1;
     }
+
+
+
 }

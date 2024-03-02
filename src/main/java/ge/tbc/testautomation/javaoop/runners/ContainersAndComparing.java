@@ -4,6 +4,7 @@ import ge.tbc.testautomation.javaoop.figures.Circle;
 import ge.tbc.testautomation.javaoop.figures.Rectangle;
 import ge.tbc.testautomation.javaoop.figures.RectangleCompare;
 
+
 import java.util.*;
 
 public class ContainersAndComparing {
@@ -63,6 +64,12 @@ public class ContainersAndComparing {
         lst.add(new Rectangle(85,19));
         lst.sort(new RectangleCompare());
         System.out.println(lst);
+        HashSet<Circle> circles = new HashSet<>();
+        Circle circle = new Circle(5);
+        Circle circle1 = circle;
+        circles.add(circle);
+        circles.add(circle1);
+        System.out.println(circles);
 
 
         }
